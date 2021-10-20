@@ -1,0 +1,13 @@
+.treatment-cover{
+background-image: url('https://demo.web3canvas.com/themeforest/medenin/images/footer-bg.jpg');
+display: flex;
+align-items: center;
+justify-content: center;
+background-size: cover;
+padding:125px 0px;
+}
+
+.treatment-box{
+    color: white;
+    width: 800px;
+}

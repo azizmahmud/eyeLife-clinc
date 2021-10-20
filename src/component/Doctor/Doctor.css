@@ -1,0 +1,19 @@
+
+.doctor-card{
+    box-shadow: 0 0 7px 0 rgb(43 52 59 / 8%);
+}
+.doctor-img{
+
+}
+.doctorName{
+    font-size: 19px;
+    font-weight: 700;
+    text-align: center;
+    color: #2c2e31;
+}
+.doctorTitle{
+    font-size: 12px;
+    font-weight: 400;
+    color: #2c2e31;
+    text-align: center;
+}

@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Thomas Jack ",
+        "img": "https://demo.web3canvas.com/themeforest/medenin/images/team2.jpg",
+        "jobTitel": "Eye Doctor"
+    },
+    {
+        "id": 2,
+        "name": "Dr. Mary Joe ",
+        "img": "https://demo.web3canvas.com/themeforest/medenin/images/team3.jpg",
+        "jobTitel": "Eye Doctor"
+    },
+    {
+        "id": 3,
+        "name": "Dr. Erick Jhon ",
+        "img": "https://demo.web3canvas.com/themeforest/medenin/images/team5.jpg",
+        "jobTitel": "Eye Doctor"
+    },
+    {
+        "id": 4,
+        "name": "Dr. Hessy Hanna",
+        "img": "https://demo.web3canvas.com/themeforest/medenin/images/team4.jpg",
+        "jobTitel": "Eye Doctor"
+    }
+   
+]

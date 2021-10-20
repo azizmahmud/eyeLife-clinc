@@ -1,0 +1,30 @@
+
+.headingtitle-seperator{
+    height: 2px;
+    border-radius: 10px;
+    background:#12b48b;
+    width: 100px;
+    margin: auto;
+    margin-top:10px ;
+    margin-bottom: 10px;
+}
+.headingtitle h1{
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 37px;
+    line-height: 46px;
+    color: #204066;
+    text-align: center;
+}
+.headingtitle p{
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 27px;
+    color: #888888;
+    padding-left:25%;
+    padding-right:25%;
+    padding-top:10px;
+    padding-bottom:30px;
+    text-align: center;
+}

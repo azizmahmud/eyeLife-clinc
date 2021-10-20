@@ -1,0 +1,29 @@
+.whyChooseUs{
+    padding: 100px 0px;
+}
+.whyChooseHeading{
+    font-size: 32px;
+    font-weight: 600;
+    color: #204066;
+    margin-top: 50px;
+}
+.icon-card{
+    display: flex;
+    align-items: center;
+}
+.iconsize{
+    font-size: 1.5em;
+    color: #05C18E;
+}
+.icon-card h4{
+font-size: 18px;
+font-weight: 600;
+color: #204066;
+}
+.icon-card-p{
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 27px;
+    color: #888888;
+}

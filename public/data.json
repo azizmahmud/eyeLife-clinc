@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "img": "http://jituchauhan.com/site-templates/medical-website-template/07_eye_care/images/service-single.jpg",
+        "serviceName": "General Ophthalmlogy",
+        "discription": "Ophthalmologist is a specialist in medical and surgical eye problems. Since ophthalmologists perform operations on eyes, they are both surgical and medical specialists."
+    },
+    {
+        "id": 2,
+        "img": "http://jituchauhan.com/site-templates/medical-website-template/07_eye_care/images/treatment-img-2.jpg",
+        "serviceName": "Cataract Surgery",
+        "discription": "Cataract surgery is the removal of the natural lens of the eye that has developed an opacification, which is referred toas a cataract."
+    },
+    {
+        "id": 3,
+        "img": "http://jituchauhan.com/site-templates/medical-website-template/07_eye_care/images/treatment-img-3.jpg",
+        "serviceName": "Paediatric Ophthalmology",
+        "discription": "Pediatric ophthalmology is a sub-speciality of ophthalmology concerned with eye diseases, visual development, and vision care in children."
+    },
+    {
+        "id": 4,
+        "img": "http://jituchauhan.com/site-templates/medical-website-template/07_eye_care/images/treatment-img-4.jpg",
+        "serviceName": "Corneal Eye Disease",
+        "discription": "The cornea is a clear layer that covers the front of the eye. It helps the eye focus, and keeps out germs and dust. This is a diseases of the cornea."
+    },
+    {
+        "id": 5,
+        "img": "http://jituchauhan.com/site-templates/medical-website-template/07_eye_care/images/treatment-img-5.jpg",
+        "serviceName": "Glaucoma",
+        "discription": "Glaucoma is a group of eye diseases which result in damage to the optic nerve and vision loss. The most common type is open-angle glaucoma with less common types."
+    },
+    {
+        "id": 6,
+        "img": "http://jituchauhan.com/site-templates/medical-website-template/07_eye_care/images/treatment-img-6.jpg",
+        "serviceName": "Diabetic Eye Disease",
+        "discription": "Diabetic retinopathy, also known as diabetic eye disease, is when damage occurs to the retina due to diabetes. It can eventually lead to blindness."
+    }
+]

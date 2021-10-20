@@ -1,0 +1,35 @@
+.vision-bg{
+    background-image:url('https://i.ibb.co/g4svLRp/vision-bg.jpg');
+    background-size: cover;
+    padding: 100px 0px;
+}
+.vision-card{
+    padding: 30px 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 7px 0 rgb(43 52 59 / 8%);
+}
+.vision-card h2{
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #204066;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.vision-card p{
+    font-family: "Poppins",Tahoma,Geneva,sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 27px;
+    letter-spacing: 0.1px;
+    color: #888888;
+    padding: 0px 20px;
+}
+.vision-card a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #12b48b;
+}
