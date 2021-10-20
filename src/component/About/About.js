@@ -1,62 +1,59 @@
 import React from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import Doctors from '../Doctors/Doctors';
+import HeadingTitle from '../HeadingTitle/HeadingTitle';
 import './About.css'
 
 const About = () => {
     return (<>
-        <div className="px-4 py-5  text-center aboutHeader">
-
-            <div className="col-lg-6 mx-auto py-5">
-                <h1 className="display-5 ">Abot Us</h1>
-                <p className="lead mb-4">The leading provider of quality vision care and personalized optometric services in London. Our focus is on providing the very best patient care possible.</p>
-            </div>
-        </div>
-        <div className="container py-5 px-5">
-            <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
-                <div className=" col-md-4">
-                    <img src="https://demo.web3canvas.com/themeforest/medenin/images/about-img.jpg" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" />
-                </div>
-                <div className="col-md-8">
-                    <h1 className="mb-3">Our Mission And Vision</h1>
-                    <p className="lead">We treat patients with respect are compassionate, thoughtful responsive to their needs and sensitive to ensuring the comfort.
-                        We treat patients with respect are compassionate, thoughtful responsive to their needs and sensitive to ensuring the comfort.
-                        We treat patients with respect are compassionate, thoughtful responsive to their needs and sensitive to ensuring the comfort.</p>
-                    <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">Our Treatment</button>
+        <Container fluid className="about-header">
+            <Row>
+                <Col>
+                    <div className="col-lg-6 mx-auto">
+                        <h1 className="text-center">About Us</h1>
+                        <p className="text-center">The leading provider of quality vision care and personalized optometric services in London. Our focus is on providing the very best patient care possible.</p>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div className="container px-4 py-5" id="featured-3">
+                </Col>
+            </Row>
+        </Container >
 
-            <h2 className="pb-2 text-center">Our Vision</h2>
-            <div className="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                <div className="feature col">
-                    <div className="feature-icon bg-primary bg-gradient">
-                        <i className="bi bi-check-circle" width="1em" height="1em"></i>
+        <Container className="aboutus-section px-5">
+            <HeadingTitle>
+                <h1 className="headingtitle-heading">About Eye Clinic</h1>
+                <div className="headingtitle-seperator"></div>
+                <p className="headingtitle-pera">Eye treatments is branch of medicine that deals with the anatomy,diseases of the eyeball</p>
+            </HeadingTitle>
+            <Row className="g-5">
+                <Col md="6">
+                    <img src="https://i.ibb.co/5LzDRps/aboutus.jpg" alt="" />
+                </Col>
+                <Col md="6">
+                    <div>
+                        <h2 className="whyChooseHeading">Introducing The High Quality EyeLife Clinic</h2>
+                        <p className="icon-card-p">There are many different eye conditions; some are minor and easily treated but others can cause serious problems or lead to permanent loss of vision. We offer varying specialties, covering all aspects of the medical and surgical eye care, including cataract surgery.</p>
                     </div>
-                    <h2>EXCELLENT TREATMENTS
-                    </h2>
-                    <p>We treat patients with respect are compassionate, thoughtful responsive to their needs and sensitive to ensuring the comfort.</p>
+                    <div className="icon-card">
+                        <i class="bi bi-check-circle-fill iconsize"></i>
+                        <p className="mb-0 ps-3">Drawing up an individual treatment program for patient.</p>
+                    </div>
+                    <div className="icon-card mt-3">
+                        <i class="bi bi-check-circle-fill iconsize"></i>
+                        <p className="mb-0 ps-3">Performing all operations and proceds highest professional level.</p>
+                    </div>
+                    <div className="icon-card mt-3">
+                        <i class="bi bi-check-circle-fill iconsize"></i>
+                        <p className="mb-0 ps-3">Compliance of materials equipment international standards.</p>
+                    </div>
+                    <div className="mt-4">
+                        <Link className="btn-regular " to="/service">See Treatment</Link>
 
-                </div>
-                <div className="feature col">
-                    <div className="feature-icon bg-primary bg-gradient">
-                        <i className="bi bi-check-circle"></i>
                     </div>
-                    <h2>INTEGRATING TEACHING
-                    </h2>
-                    <p>We ethically, accept personal accountability, communicate openly and honestly and treat everyone with trust and respect.</p>
+                </Col>
+            </Row>
+        </Container>
+        <Doctors></Doctors>
 
-                </div>
-                <div className="feature col">
-                    <div className="feature-icon bg-primary bg-gradient">
-                        <i className="bi bi-check-circle" width="1em" height="1em"></i>
-                    </div>
-                    <h2>WORKFORCE CAPABILITY</h2>
-                    <p>We communicate openly, respect diversity of views and skills and work effectively with partners and in multi-disciplinary teams.</p>
-                </div>
-            </div>
-        </div>
     </>
     );
 };

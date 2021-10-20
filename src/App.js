@@ -16,6 +16,8 @@ import Treatment from './component/Treatment/Treatment';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import Footer from './component/Shared/Footer/Footer';
 import About from './component/About/About';
+import NotFound from './component/NotFound/NotFound';
+import Contact from './component/Contact/Contact';
 
 function App() {
   return (
@@ -33,6 +35,9 @@ function App() {
             <Route path="/about">
               <About></About>
             </Route>
+            <Route path="/contact">
+              <Contact></Contact>
+            </Route>
             <Route path="/login">
               <LogIn></LogIn>
             </Route>
@@ -45,6 +50,9 @@ function App() {
             <PrivateRoute path='/serviceDetails/:detailsId'>
               <ServiceDetails></ServiceDetails>
             </PrivateRoute>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
           </Switch>
           <Footer></Footer>
         </Router>

@@ -9,6 +9,7 @@ const useFirebase = () => {
     const [error, setError] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [isLoading, setIsLoading] = useState(true)
 
 
     const auth = getAuth();
@@ -17,6 +18,7 @@ const useFirebase = () => {
     const signInUsingGoogle = () => {
 
         const googleProvider = new GoogleAuthProvider();
+        setIsLoading(true)
         signInWithPopup(auth, googleProvider)
             .then(result => {
                 setUser(result.user);
@@ -24,10 +26,12 @@ const useFirebase = () => {
             .catch(error => {
                 setError(error.message)
             })
+            .finally(() => setIsLoading(false))
     }
 
     const signUpWithEmailPassword = (e) => {
         e.preventDefault();
+        setIsLoading(true)
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 // Signed in 
@@ -38,10 +42,12 @@ const useFirebase = () => {
 
                 setError(error.message)
 
-            });
+            })
+            .finally(() => setIsLoading(false))
     }
     const loginWithEmailPassword = (e) => {
         e.preventDefault();
+        setIsLoading(true)
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 // Signed in 
@@ -49,7 +55,8 @@ const useFirebase = () => {
             })
             .catch(error => {
                 setError(error.message)
-            });
+            })
+            .finally(() => setIsLoading(false))
     }
 
 
@@ -63,6 +70,7 @@ const useFirebase = () => {
             } else {
                 setUser({})
             }
+            setIsLoading(false)
         });
 
 
@@ -77,6 +85,8 @@ const useFirebase = () => {
     return {
         user,
         error,
+        isLoading,
+        setIsLoading,
         signInUsingGoogle,
         signUpWithEmailPassword,
         loginWithEmailPassword,
