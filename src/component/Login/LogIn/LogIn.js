@@ -3,9 +3,42 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import LoginIllastraion from '../../../image/login-illastration.png'
+import { useHistory, useLocation } from 'react-router';
 
 const LogIn = () => {
-    const { setEmail, setPassword, signInUsingGoogle, loginWithEmailPassword, error } = useAuth()
+    const { setEmail, setUser, setError, setPassword, signInUsingGoogle, loginWithEmailPassword, setIsLoading, error } = useAuth();
+    const history = useHistory()
+    const location = useLocation()
+    const redirect_url = location.state?.from || "/home"
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+        
+        loginWithEmailPassword()
+            .then(result => {
+                history.push(redirect_url)
+                // Signed in 
+                setUser(result.user)
+            })
+            .catch(error => {
+                setError(error.message)
+            })
+        setIsLoading(false)
+
+    }
+    const handaleGoogleLogIn = (e) => {
+        e.preventDefault();
+        signInUsingGoogle()
+            .then(result => {
+                history.push(redirect_url)
+                setUser(result.user);
+            })
+            .catch(error => {
+                setError(error.message)
+            })
+        setIsLoading(false)
+
+    }
 
 
     const handleEmail = (e) => {
@@ -22,7 +55,7 @@ const LogIn = () => {
             <Row>
                 <Col md={6} className="d-flex align-items-center">
                     <div className="w-75 mx-auto">
-                        <form onSubmit={loginWithEmailPassword} className="row g-4">
+                        <form onSubmit={handleLogin} className="row g-4">
                             <div className="col-md-12">
                                 <h2 className="text-center">Please Log In</h2>
                             </div>
@@ -43,7 +76,7 @@ const LogIn = () => {
                         </form>
                         <div className="col-12 text-center mt-3">
                             <p className="mx-3 text-muted">Or</p>
-                            <button onClick={signInUsingGoogle} className="btn w-100 btn-success"><i className="bi bi-google"></i>  Google Log in</button>
+                            <button onClick={handaleGoogleLogIn} className="btn w-100 btn-success"><i className="bi bi-google"></i>  Google Log in</button>
                             <p className="mt-3 text-muted">New user?<Link to="/register">Create Account</Link></p>
                         </div>
                     </div>

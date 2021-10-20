@@ -3,11 +3,32 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import LoginIllastraion from '../../../image/login-illastration.png'
+import { useHistory, useLocation } from 'react-router';
 
 const Register = () => {
 
-    const { signUpWithEmailPassword, setEmail, setPassword, error } = useAuth();
+    const { signUpWithEmailPassword, setEmail, setUser, setPassword, error, setError, setIsLoading } = useAuth();
 
+    const history = useHistory()
+    const location = useLocation()
+    const redirect_url = location.state?.from || "/home"
+
+    const handaleRegistration = (e) => {
+
+        e.preventDefault();
+        signUpWithEmailPassword()
+            .then(result => {
+                history.push(redirect_url)
+                setUser(result.user)
+
+            })
+            .catch(error => {
+
+                setError(error.message)
+
+            })
+        setIsLoading(false)
+    }
     const handleEmail = (e) => {
         setEmail(e.target.value)
     }
@@ -22,7 +43,7 @@ const Register = () => {
             <Row>
                 <Col md={6} className="d-flex align-items-center">
                     <div className="w-75 mx-auto">
-                        <form onSubmit={signUpWithEmailPassword} class="row g-4">
+                        <form onSubmit={handaleRegistration} class="row g-4">
                             <div class="col-md-12">
                                 <h2 className="text-center">Create An Account</h2>
                             </div>

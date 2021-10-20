@@ -8,7 +8,6 @@ const ServiceDetails = () => {
     const { detailsId } = useParams();
 
     const [services, setServices] = useState([])
-    console.log(services)
 
     useEffect(() => {
         fetch('/data.json')
@@ -17,7 +16,6 @@ const ServiceDetails = () => {
     }, [])
 
     const service = services?.find(x => x.id == detailsId)
-    console.log(service)
 
     return (
         <Container>

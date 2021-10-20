@@ -35,9 +35,9 @@ function App() {
             <Route path="/about">
               <About></About>
             </Route>
-            <Route path="/contact">
+            <PrivateRoute path="/contact">
               <Contact></Contact>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <LogIn></LogIn>
             </Route>

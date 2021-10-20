@@ -34,15 +34,15 @@ const About = () => {
                         <p className="icon-card-p">There are many different eye conditions; some are minor and easily treated but others can cause serious problems or lead to permanent loss of vision. We offer varying specialties, covering all aspects of the medical and surgical eye care, including cataract surgery.</p>
                     </div>
                     <div className="icon-card">
-                        <i class="bi bi-check-circle-fill iconsize"></i>
+                        <i className="bi bi-check-circle-fill iconsize"></i>
                         <p className="mb-0 ps-3">Drawing up an individual treatment program for patient.</p>
                     </div>
                     <div className="icon-card mt-3">
-                        <i class="bi bi-check-circle-fill iconsize"></i>
+                        <i className="bi bi-check-circle-fill iconsize"></i>
                         <p className="mb-0 ps-3">Performing all operations and proceds highest professional level.</p>
                     </div>
                     <div className="icon-card mt-3">
-                        <i class="bi bi-check-circle-fill iconsize"></i>
+                        <i className="bi bi-check-circle-fill iconsize"></i>
                         <p className="mb-0 ps-3">Compliance of materials equipment international standards.</p>
                     </div>
                     <div className="mt-4">

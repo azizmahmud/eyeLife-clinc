@@ -19,44 +19,21 @@ const useFirebase = () => {
 
         const googleProvider = new GoogleAuthProvider();
         setIsLoading(true)
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                setUser(result.user);
-            })
-            .catch(error => {
-                setError(error.message)
-            })
-            .finally(() => setIsLoading(false))
+       return signInWithPopup(auth, googleProvider)
+         
     }
 
     const signUpWithEmailPassword = (e) => {
-        e.preventDefault();
+
         setIsLoading(true)
-        createUserWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                // Signed in 
-                setUser(result.user)
-
-            })
-            .catch(error => {
-
-                setError(error.message)
-
-            })
-            .finally(() => setIsLoading(false))
+       return createUserWithEmailAndPassword(auth, email, password)
+       
     }
-    const loginWithEmailPassword = (e) => {
-        e.preventDefault();
+    const loginWithEmailPassword = () => {
+
         setIsLoading(true)
-        signInWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                // Signed in 
-                setUser(result.user)
-            })
-            .catch(error => {
-                setError(error.message)
-            })
-            .finally(() => setIsLoading(false))
+        return signInWithEmailAndPassword(auth, email, password)
+      
     }
 
 
@@ -85,6 +62,8 @@ const useFirebase = () => {
     return {
         user,
         error,
+        setError,
+        setUser,
         isLoading,
         setIsLoading,
         signInUsingGoogle,
